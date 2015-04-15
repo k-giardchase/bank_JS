@@ -30,25 +30,20 @@ $(document).ready(function() {
             var inputtedDeposit = parseInt($("input#deposit").val());
             var inputtedWithdraw = parseInt($("input#withdraw").val());
 
-
-            // var newBankAccount = Object.create(BankAccount);
-            // var newPerson = Object.create(Person);
             if(isNaN(inputtedWithdraw)) {
-              return newBankAccount.balance;
+              newBankAccount.balance;
             } else {
               newBankAccount.withdraw(inputtedWithdraw);
-              // newPerson.accountBalance = newBankAccount.balance;
             }
 
-            // if(!(isNaN(inputtedDeposit !== NaN) {
-            //   newBankAccount.deposit(inputtedDeposit);
-            //   newPerson.accountBalance = newBankAccount.balance;
-            // }
+            if(isNaN(inputtedDeposit)) {
+              newBankAccount.balance;
+            } else {
+              newBankAccount.deposit(inputtedDeposit);
+            }
 
             $('#balance').show();
             $('.bank-balance').text(newBankAccount.balance);
         });
     });
-
-
 });
