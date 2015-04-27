@@ -23,6 +23,8 @@ $(document).ready(function() {
         $('#balance').show();
         $('.customer').text(newBankAccount.customerName);
         $('.bank-balance').text(newBankAccount.balance);
+        $("input#name").val("");
+        $("input#first-deposit").val("");
 
         $("form#deposit-withdraw").submit(function(event) {
             event.preventDefault();
@@ -44,6 +46,9 @@ $(document).ready(function() {
 
             $('#balance').show();
             $('.bank-balance').text(newBankAccount.balance);
+
+            $("input#withdraw").val("");
+            $("input#deposit").val("");
         });
     });
 });
